@@ -1,0 +1,145 @@
+{
+  "version": 2,
+  "repository": "<YOUR_GITHUB_REPOSITORY_URL>",
+  "templateDocument": "docs/templates.md",
+  "caseDocument": "data/recruitment-cases.json",
+  "brandBenchmarkDocument": "data/brand-recruitment-cases.json",
+  "tagLabels": {
+    "Recruitment": { "en": "Recruitment", "zh": "招聘" },
+    "Restaurant": { "en": "Restaurant", "zh": "餐饮" },
+    "Typography": { "en": "Typography", "zh": "字体" },
+    "Information": { "en": "Information", "zh": "信息排版" },
+    "Storefront": { "en": "Storefront", "zh": "门店物料" },
+    "Poster": { "en": "Poster", "zh": "海报" },
+    "A4": { "en": "A4", "zh": "A4" },
+    "China": { "en": "China", "zh": "中国市场" },
+    "Brand Benchmark": { "en": "Brand Benchmark", "zh": "品牌基准" },
+    "Campaign": { "en": "Campaign", "zh": "系列 Campaign" },
+    "Trademark": { "en": "Trademark", "zh": "商标边界" }
+  },
+  "brandGuardrails": {
+    "brandName": "铁毅祥河洛面",
+    "categoryName": "河南郏县河洛面",
+    "requiredRecruitmentCopy": [
+      "收银员",
+      "服务员",
+      "厨房杂工",
+      "工资面议",
+      "15093777772",
+      "18317666660"
+    ],
+    "brandVariantPolicy": "品牌名必须逐字等于‘铁毅祥河洛面’，不接受任何替代写法。"
+  },
+  "categories": [
+    {
+      "id": "cat-recruitment",
+      "value": "Recruitment & Hiring",
+      "anchor": "cat-recruitment",
+      "templateAnchor": "tpl-recruitment",
+      "cover": "/assets/recruitment/case-r001-a-frame-sign.jpg",
+      "title": { "en": "Recruitment & Hiring", "zh": "招聘海报" },
+      "description": {
+        "en": "Evidence-based hiring posters for Chinese restaurant storefronts, A-frames and social media.",
+        "zh": "基于国内餐饮实战案例的门店水牌、A4 招聘海报和社媒招聘视觉。"
+      }
+    },
+    {
+      "id": "cat-brand-recruitment-benchmarks",
+      "value": "Brand Recruitment Benchmarks",
+      "anchor": "cat-brand-recruitment-benchmarks",
+      "templateAnchor": "tpl-brand-benchmark",
+      "cover": "/assets/recruitment/brand-benchmarks/case-r020-lou-shi-ming-info-rail.jpg",
+      "title": { "en": "Brand Recruitment Benchmarks", "zh": "品牌招聘基准" },
+      "description": {
+        "en": "Twenty user-supplied screenshots analyzed for transferable layout systems, with unverified official status and explicit trademark boundaries.",
+        "zh": "20 张用户提供的品牌招聘截图，提炼可迁移版式系统，并明确官方状态未核验与商标禁用边界。"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "restaurant-recruitment-poster-system",
+      "cover": "/assets/recruitment/case-r002-kraft-editorial.jpg",
+      "title": { "en": "Restaurant Recruitment Poster System", "zh": "餐饮招聘海报系统" },
+      "description": {
+        "en": "Routes a real hiring brief to one proven Chinese restaurant-poster structure.",
+        "zh": "把真实招聘需求路由到一种经过案例验证的中国餐饮招聘结构。"
+      },
+      "category": "Recruitment & Hiring",
+      "styles": ["Poster", "Typography", "Information"],
+      "scenes": ["Restaurant", "Storefront", "China"],
+      "tags": ["Recruitment", "Restaurant", "Poster", "A4"],
+      "useWhen": {
+        "en": "Use for restaurant hiring posters where positions, pay and contact details must be understood immediately.",
+        "zh": "用于岗位、待遇和联系方式必须一眼看懂的餐饮招聘海报。"
+      },
+      "guidance": {
+        "en": [
+          "Select exactly one primary case family before prompting.",
+          "Keep positions and contact information above decorative storytelling.",
+          "Use exact approved copy and verify every Chinese character."
+        ],
+        "zh": [
+          "生成前只选择一个主案例结构。",
+          "岗位和联系方式的优先级高于装饰叙事。",
+          "硬编码批准文案并逐字校验中文。"
+        ]
+      },
+      "pitfalls": {
+        "en": [
+          "Do not invent salaries, benefits, addresses or QR codes.",
+          "Do not mix every reference into one poster.",
+          "The brand name must match the approved canonical name character for character."
+        ],
+        "zh": [
+          "不要虚构工资、福利、地址或二维码。",
+          "不要把所有参考风格堆进一张海报。",
+          "不要用相似面食品类词替换品牌标准名。"
+        ]
+      },
+      "caseIds": ["R001", "R002", "R003", "R004", "R005", "R006"]
+    },
+    {
+      "id": "brand-recruitment-benchmark-router",
+      "cover": "/assets/recruitment/brand-benchmarks/case-r022-xijiade-physical-sign.jpg",
+      "title": { "en": "Brand Recruitment Benchmark Router", "zh": "品牌招聘基准路由器" },
+      "description": {
+        "en": "Transfers information hierarchy and campaign logic from one benchmark while replacing every identity asset.",
+        "zh": "从单一品牌案例迁移信息层级与 Campaign 逻辑，同时替换全部身份资产。"
+      },
+      "category": "Brand Recruitment Benchmarks",
+      "styles": ["Brand Benchmark", "Information", "Campaign"],
+      "scenes": ["Restaurant", "Storefront", "China"],
+      "tags": ["Recruitment", "Brand Benchmark", "Trademark"],
+      "useWhen": {
+        "en": "Use when a mature chain-brand reference is needed for hierarchy, modularity or campaign consistency.",
+        "zh": "用于需要成熟连锁品牌的信息层级、模块化或系列一致性时。"
+      },
+      "guidance": {
+        "en": [
+          "Select exactly one benchmark case and one transferable mechanism.",
+          "Read nonReusableIdentityAssets before drafting.",
+          "Replace every logo, mascot, product, illustration and slogan with authorized brand-owned material."
+        ],
+        "zh": [
+          "只选择一个品牌基准案例和一个可迁移机制。",
+          "构图前先读取 nonReusableIdentityAssets。",
+          "所有 Logo、吉祥物、产品、插画和口号必须替换为自有或获授权资产。"
+        ]
+      },
+      "pitfalls": {
+        "en": [
+          "Do not treat visible brand marks as proof of official publication.",
+          "Do not clone a benchmark composition pixel for pixel.",
+          "Do not mix identity systems from multiple brands."
+        ],
+        "zh": [
+          "画面出现商标不等于已证明由官方发布。",
+          "不要像素级复刻单一案例。",
+          "不要混用多个品牌的身份系统。"
+        ]
+      },
+      "caseIds": ["R007", "R008", "R009", "R010", "R011", "R012", "R013", "R014", "R015", "R016", "R017", "R018", "R019", "R020", "R021", "R022", "R023", "R024", "R025", "R026"]
+    }
+  ]
+}

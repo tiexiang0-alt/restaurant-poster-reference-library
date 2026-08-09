@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schema/recruitment-case.schema.json",
+  "title": "Restaurant Recruitment Reference Case",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "title",
+    "asset",
+    "assetMeta",
+    "source",
+    "rights",
+    "layoutFamily",
+    "compositionDensity",
+    "designEngine",
+    "reusableElements",
+    "layoutZones",
+    "whyItWorks",
+    "riskNotes"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^R[0-9]{3}$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "type": "string", "minLength": 2 },
+        "en": { "type": "string", "minLength": 2 }
+      },
+      "additionalProperties": false
+    },
+    "asset": { "type": "string" },
+    "assetMeta": {
+      "type": "object",
+      "required": ["width", "height", "format", "sha256"]
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "traceability"]
+    },
+    "rights": {
+      "type": "object",
+      "required": ["status", "commercialReuseVerified"]
+    },
+    "compositionDensity": {
+      "enum": ["sparse", "moderate", "abundant", "collage"]
+    },
+    "reusableElements": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string" }
+    },
+    "layoutZones": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "prefixItems": [
+          { "type": "number", "minimum": 0, "maximum": 1 },
+          { "type": "number", "minimum": 0, "maximum": 1 },
+          { "type": "number", "minimum": 0, "maximum": 1 },
+          { "type": "number", "minimum": 0, "maximum": 1 }
+        ],
+        "items": false
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

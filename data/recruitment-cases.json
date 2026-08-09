@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "category": {
+    "id": "cat-recruitment",
+    "name": { "en": "Recruitment & Hiring", "zh": "招聘海报" },
+    "market": "中国大陆餐饮门店",
+    "caseCount": 6
+  },
+  "cases": [
+    {
+      "id": "R001",
+      "slug": "a-frame-single-character",
+      "title": { "zh": "商场 A 型水牌｜单字招聘＋岗位薪资", "en": "A-frame sign with single-character hiring hook" },
+      "asset": "assets/recruitment/case-r001-a-frame-sign.jpg",
+      "assetMeta": {
+        "width": 944,
+        "height": 2048,
+        "format": "JPEG",
+        "sha256": "59c7c6e5871b8c19af7838ca621c5de3471914d54f390ea073ef6984c551988b"
+      },
+      "source": { "type": "user-supplied", "originalUrl": null, "traceability": "incomplete" },
+      "rights": { "status": "reference-only", "commercialReuseVerified": false },
+      "physicalFormat": "商场门店 A 型落地水牌",
+      "orientation": "portrait",
+      "layoutFamily": "single-character-hero",
+      "compositionDensity": "moderate",
+      "dominantPalette": ["橄榄绿", "暖白", "深棕"],
+      "designEngine": "用一个超大‘聘’字完成远距识别，再把岗位和薪资压缩成居中的短列表。",
+      "reusableElements": [
+        "顶部品牌区与主体信息区分离",
+        "单字巨型标题",
+        "岗位与薪资同一基线排列",
+        "浅色圆角信息底板",
+        "边缘竖排辅助文字"
+      ],
+      "layoutZones": {
+        "brand": [0.10, 0.17, 0.78, 0.08],
+        "headline": [0.47, 0.26, 0.41, 0.24],
+        "jobs": [0.34, 0.51, 0.54, 0.23],
+        "requirements": [0.16, 0.74, 0.68, 0.10],
+        "footer": [0.12, 0.85, 0.76, 0.10]
+      },
+      "typography": ["超大黑体单字", "中号宋体或衬线岗位字", "小号无衬线说明"],
+      "whyItWorks": ["三米外先看到招聘意图", "岗位列表短，适合门店快速阅读", "色彩区别于常见红色招聘水牌"],
+      "riskNotes": ["小字号要求在实际水牌上可能难读", "英文竖排不应成为必选装饰"],
+      "suitableFor": ["商场餐饮", "门店入口", "岗位较少的招聘"]
+    },
+    {
+      "id": "R002",
+      "slug": "kraft-editorial-information",
+      "title": { "zh": "牛皮纸编辑式｜粗黑招聘＋说明框", "en": "Kraft-paper editorial hiring poster" },
+      "asset": "assets/recruitment/case-r002-kraft-editorial.jpg",
+      "assetMeta": {
+        "width": 944,
+        "height": 2048,
+        "format": "JPEG",
+        "sha256": "078c5ec923a32ee445f1d26d2431a6994ce75fea778a803cdf55e410d987e148"
+      },
+      "source": { "type": "user-supplied", "originalUrl": null, "traceability": "incomplete" },
+      "rights": { "status": "reference-only", "commercialReuseVerified": false },
+      "physicalFormat": "A4/A3 平面招聘海报",
+      "orientation": "portrait",
+      "layoutFamily": "editorial-information-sheet",
+      "compositionDensity": "abundant",
+      "dominantPalette": ["牛皮纸棕", "黑", "米白"],
+      "designEngine": "以粗粝黑体和不规则白色剪纸形成主视觉，下半部用框线承载岗位职责与待遇。",
+      "reusableElements": [
+        "牛皮纸或再生纸肌理",
+        "不规则白色标题衬底",
+        "大号序号",
+        "职责信息框",
+        "粗细线与标签式小标题"
+      ],
+      "layoutZones": {
+        "headline": [0.02, 0.19, 0.47, 0.34],
+        "hook": [0.48, 0.26, 0.42, 0.13],
+        "position": [0.05, 0.53, 0.58, 0.10],
+        "details": [0.04, 0.64, 0.88, 0.25],
+        "contact": [0.04, 0.90, 0.88, 0.07]
+      },
+      "typography": ["粗黑展示字", "无衬线英文或拼音点缀", "规则正文黑体"],
+      "whyItWorks": ["标题与信息正文的层级清楚", "纸张肌理降低模板感", "适合需要解释职责和福利的招聘"] ,
+      "riskNotes": ["信息过多时远距可读性下降", "不应照搬示例中的具体福利和电话号码"],
+      "suitableFor": ["社媒长图", "店内公告", "需要岗位说明的招聘"]
+    },
+    {
+      "id": "R003",
+      "slug": "red-calligraphy-traditional",
+      "title": { "zh": "红色传统餐饮型｜巨型书写字＋薪资福利", "en": "Traditional red calligraphic restaurant hiring poster" },
+      "asset": "assets/recruitment/case-r003-red-calligraphy.jpg",
+      "assetMeta": {
+        "width": 944,
+        "height": 2048,
+        "format": "JPEG",
+        "sha256": "7cca9a59d686a40caad34d0d2b05b83579fca5c3fe5020188390294608ea889a"
+      },
+      "source": { "type": "user-supplied", "originalUrl": null, "traceability": "incomplete" },
+      "rights": { "status": "reference-only", "commercialReuseVerified": false },
+      "physicalFormat": "传统餐饮招聘海报",
+      "orientation": "portrait",
+      "layoutFamily": "calligraphic-hero",
+      "compositionDensity": "moderate",
+      "dominantPalette": ["中国红", "黑", "米白"],
+      "designEngine": "右侧巨型书写‘聘’字形成行业熟悉感，左侧按岗位、底薪、福利、资格和电话顺序阅读。",
+      "reusableElements": [
+        "红色单色背景",
+        "右侧巨型书写字",
+        "岗位胶囊标签",
+        "福利与资格双栏",
+        "底部联系方式"
+      ],
+      "layoutZones": {
+        "brand": [0.11, 0.22, 0.32, 0.09],
+        "headline": [0.43, 0.24, 0.47, 0.32],
+        "positions": [0.13, 0.42, 0.40, 0.25],
+        "benefits": [0.12, 0.67, 0.67, 0.16],
+        "contact": [0.12, 0.84, 0.63, 0.06]
+      },
+      "typography": ["书写体巨字", "粗黑岗位标题", "白色正文"],
+      "whyItWorks": ["符合传统餐饮门店熟悉的招聘语境", "薪资数字突出", "信息顺序符合求职者决策路径"],
+      "riskNotes": ["书写字不可影响岗位信息识别", "二维码和福利不得虚构"],
+      "suitableFor": ["火锅与中餐门店", "红色品牌 VI", "线下张贴"]
+    },
+    {
+      "id": "R004",
+      "slug": "scene-photo-department-list",
+      "title": { "zh": "场景摄影型｜前厅后厨双栏岗位", "en": "Scene-photo hiring poster with department lists" },
+      "asset": "assets/recruitment/case-r004-scene-photo.jpg",
+      "assetMeta": {
+        "width": 944,
+        "height": 2048,
+        "format": "JPEG",
+        "sha256": "a7d79be020fb4f4a62d456d4b9014aba5dbd98c6e70e0b90ff3044c01da85f70"
+      },
+      "source": { "type": "user-supplied-social-screenshot", "originalUrl": null, "traceability": "incomplete" },
+      "rights": { "status": "reference-only", "commercialReuseVerified": false },
+      "physicalFormat": "短视频/社媒招聘长图截图",
+      "orientation": "portrait",
+      "layoutFamily": "environment-photo-overlay",
+      "compositionDensity": "abundant",
+      "dominantPalette": ["深棕", "米金", "暗红"],
+      "designEngine": "用真实经营场景建立行业氛围，再以大号招聘字、前厅后厨标签和工资表覆盖其上。",
+      "reusableElements": [
+        "经营场景背景图",
+        "前厅/后厨分类标签",
+        "岗位与工资两列对齐",
+        "器皿轮廓承载待遇",
+        "底部联系人与地址区"
+      ],
+      "layoutZones": {
+        "brand": [0.08, 0.18, 0.20, 0.09],
+        "headline": [0.59, 0.20, 0.35, 0.32],
+        "departmentLists": [0.08, 0.38, 0.53, 0.36],
+        "benefits": [0.57, 0.58, 0.34, 0.14],
+        "contact": [0.07, 0.75, 0.82, 0.14]
+      },
+      "typography": ["米金书写体", "宋体说明", "表格式数字"],
+      "whyItWorks": ["背景直接说明工作场景", "岗位较多时仍可按部门检索", "适合社媒端完整说明"] ,
+      "riskNotes": ["背景对比不足会降低文字可读性", "截图中的平台 UI 不是海报内容", "地址与二维码必须来自真实信息"],
+      "suitableFor": ["岗位较多的餐厅", "社媒招聘", "需要展示门店氛围的品牌"]
+    },
+    {
+      "id": "R005",
+      "slug": "red-gold-chain-list",
+      "title": { "zh": "红金连锁型｜岗位薪资表＋要求", "en": "Red-and-gold chain restaurant hiring list" },
+      "asset": "assets/recruitment/case-r005-red-gold-list.jpg",
+      "assetMeta": {
+        "width": 944,
+        "height": 2048,
+        "format": "JPEG",
+        "sha256": "1ba7d1576f2e4889e9c500930efd3cba6fc3d63c92c8d53dedd1f510a5035fab"
+      },
+      "source": { "type": "user-supplied-template-screenshot", "originalUrl": null, "traceability": "incomplete" },
+      "rights": { "status": "reference-only", "commercialReuseVerified": false },
+      "physicalFormat": "通用连锁餐饮招聘模板",
+      "orientation": "portrait",
+      "layoutFamily": "salary-list",
+      "compositionDensity": "abundant",
+      "dominantPalette": ["正红", "金色", "白色"],
+      "designEngine": "以红金传统招聘语义吸引注意，用岗位名称、人数和工资的规则表格快速完成信息扫描。",
+      "reusableElements": [
+        "红金高对比配色",
+        "巨型聘字",
+        "岗位/人数/工资三列",
+        "岗位要求分区",
+        "电话和二维码并置"
+      ],
+      "layoutZones": {
+        "brand": [0.06, 0.19, 0.36, 0.08],
+        "headline": [0.49, 0.20, 0.45, 0.28],
+        "jobTable": [0.07, 0.45, 0.68, 0.27],
+        "requirements": [0.06, 0.72, 0.73, 0.14],
+        "contact": [0.05, 0.86, 0.88, 0.11]
+      },
+      "typography": ["金色书写字", "粗黑岗位字", "白色表格正文"],
+      "whyItWorks": ["岗位数量较多时扫描效率高", "红金语义符合国内传统餐饮招聘", "联系方式落点明确"],
+      "riskNotes": ["模板水印和二维码不可沿用", "岗位与工资行必须严格对齐", "避免大面积渐变造成廉价感"],
+      "suitableFor": ["传统中餐连锁", "多岗位集中招聘", "线上线下通用"]
+    },
+    {
+      "id": "R006",
+      "slug": "series-template-grid",
+      "title": { "zh": "系列模板型｜同一系统的四种招聘版式", "en": "Four-layout recruitment campaign system" },
+      "asset": "assets/recruitment/case-r006-series-grid.png",
+      "assetMeta": {
+        "width": 944,
+        "height": 2048,
+        "format": "PNG",
+        "sha256": "b0763a2d8aa61d8d204b3a0ca2bba4e01f363bb82b2e07c085c18b2a7e2b4231"
+      },
+      "source": { "type": "user-supplied-portfolio-screenshot", "originalUrl": null, "traceability": "incomplete" },
+      "rights": { "status": "reference-only", "commercialReuseVerified": false },
+      "physicalFormat": "系列设计展示截图",
+      "orientation": "portrait",
+      "layoutFamily": "campaign-series",
+      "compositionDensity": "moderate",
+      "dominantPalette": ["森林绿", "米白", "黑"],
+      "designEngine": "保持背景、字体和信息卡一致，通过标题方向与信息卡位置变化形成系列，而不是每张重新发明视觉语言。",
+      "reusableElements": [
+        "统一自然场景背景",
+        "统一粗白标题字",
+        "米白招聘信息卡",
+        "横版与竖版信息卡切换",
+        "同一系统四版式适配"
+      ],
+      "layoutZones": {
+        "seriesGrid": [0.09, 0.23, 0.83, 0.60],
+        "headlineVariants": [0.12, 0.25, 0.73, 0.25],
+        "informationCards": [0.12, 0.48, 0.72, 0.29]
+      },
+      "typography": ["粗白手写展示字", "黑色岗位信息", "小号品牌字"],
+      "whyItWorks": ["适合持续招聘与多渠道发布", "统一资产降低后续制作成本", "不同版式仍保持品牌识别"],
+      "riskNotes": ["森林背景属于特定品牌语境，不应默认套用到面馆", "截图水印和原品牌元素不可复用", "系列化必须先锁定统一组件"],
+      "suitableFor": ["招聘 Campaign", "多尺寸适配", "持续更新岗位信息"]
+    }
+  ]
+}
+
