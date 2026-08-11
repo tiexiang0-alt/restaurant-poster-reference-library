@@ -18,3 +18,12 @@
 4. 品牌案例写入 `data/brand-recruitment-cases.json`，不要与通用案例混为一组。
 
 涉及铁毅祥时，品牌标准名必须为“铁毅祥河洛面”，品类描述必须为“河南郏县河洛面”。
+
+新增多菜品/招牌菜案例时：
+
+1. 图片放入 `assets/multi-dish-signature/`，文件名使用 `case-dNNN-description.ext`。
+2. 在 `data/multi-dish-signature-cases.json` 添加结构化记录，ID 使用 `DNNN`。
+3. 必须填写 `dishCountShown`、`dishHierarchy`、`foodImageTreatment`、`merchandisingRole` 和 `screenshotTreatment`。
+4. 平台 UI、黑边、水印、二维码和作品集标识不得写入 `reusableElements`。
+5. 接触食材、产地、健康、价格与套餐数量时，只记录画面事实，不推断未给出的经营信息。
+6. 更新 `docs/multi-dish-signature.md`、README 和样式路由后运行 `npm run validate`。

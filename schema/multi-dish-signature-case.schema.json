@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tiexiang0-alt/restaurant-poster-reference-library/schema/multi-dish-signature-case.schema.json",
+  "title": "Multi-dish & Signature Dish Poster Reference Case",
+  "type": "object",
+  "required": [
+    "id", "slug", "title", "asset", "assetMeta", "source", "rights",
+    "physicalFormat", "orientation", "screenshotTreatment", "layoutFamily",
+    "dishCountShown", "dishHierarchy", "compositionDensity", "dominantPalette",
+    "designEngine", "reusableElements", "foodImageTreatment", "layoutZones",
+    "typography", "merchandisingRole", "whyItWorks", "riskNotes", "suitableFor", "tags"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^D[0-9]{3}$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": {
+      "type": "object",
+      "required": ["zh", "en"],
+      "properties": {
+        "zh": { "type": "string", "minLength": 2 },
+        "en": { "type": "string", "minLength": 2 }
+      },
+      "additionalProperties": false
+    },
+    "asset": { "type": "string", "pattern": "^assets/multi-dish-signature/" },
+    "assetMeta": {
+      "type": "object",
+      "required": ["width", "height", "format", "sha256"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "format": { "enum": ["JPEG", "PNG", "WEBP"] },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["status", "commercialReuseVerified"],
+      "properties": {
+        "status": { "const": "reference-only" },
+        "commercialReuseVerified": { "const": false }
+      }
+    },
+    "layoutFamily": {
+      "enum": ["hero-support", "equal-weight-grid", "vertical-stack", "cutout-collage", "scene-still-life", "price-menu", "seasonal-feast", "series-contact-sheet"]
+    },
+    "dishCountShown": { "type": "integer", "minimum": 1 },
+    "compositionDensity": { "enum": ["sparse", "moderate", "abundant", "collage"] },
+    "reusableElements": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+    "foodImageTreatment": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+    "layoutZones": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "array",
+        "prefixItems": [
+          { "type": "number", "minimum": 0, "maximum": 1 },
+          { "type": "number", "minimum": 0, "maximum": 1 },
+          { "type": "number", "minimum": 0, "maximum": 1 },
+          { "type": "number", "minimum": 0, "maximum": 1 }
+        ],
+        "items": false
+      }
+    }
+  },
+  "additionalProperties": true
+}
