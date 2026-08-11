@@ -9,6 +9,7 @@ const readJson = async (path) => JSON.parse(await readFile(resolve(root, path), 
 const styleLibrary = await readJson("data/style-library.json");
 const caseLibrary = await readJson("data/recruitment-cases.json");
 const brandBenchmarkLibrary = await readJson("data/brand-recruitment-cases.json");
+const multiDishLibrary = await readJson("data/multi-dish-signature-cases.json");
 const templateText = await readFile(resolve(root, "docs/templates.md"), "utf8");
 
 const errors = [];
@@ -35,9 +36,12 @@ if (caseLibrary.cases.length !== caseLibrary.category.caseCount) {
 if (brandBenchmarkLibrary.cases.length !== brandBenchmarkLibrary.category.caseCount) {
   errors.push("品牌基准 category.caseCount 与 cases 数量不一致");
 }
+if (multiDishLibrary.cases.length !== multiDishLibrary.category.caseCount) {
+  errors.push("多菜品 category.caseCount 与 cases 数量不一致");
+}
 
 const ids = new Set();
-for (const item of [...caseLibrary.cases, ...brandBenchmarkLibrary.cases]) {
+for (const item of [...caseLibrary.cases, ...brandBenchmarkLibrary.cases, ...multiDishLibrary.cases]) {
   for (const field of requiredCaseFields) {
     if (!(field in item)) errors.push(`${item.id ?? "unknown"} 缺少字段 ${field}`);
   }
@@ -56,6 +60,34 @@ for (const item of [...caseLibrary.cases, ...brandBenchmarkLibrary.cases]) {
       errors.push(`${item.id}.${zoneName} 不是合法的 [x,y,w,h] 归一化框`);
     }
   }
+}
+
+const multiDishRequiredFields = [
+  "physicalFormat",
+  "orientation",
+  "screenshotTreatment",
+  "dishCountShown",
+  "dishHierarchy",
+  "dominantPalette",
+  "foodImageTreatment",
+  "typography",
+  "merchandisingRole",
+  "suitableFor",
+  "tags"
+];
+const multiDishLayoutFamilies = new Set(multiDishLibrary.layoutFamilies.map((family) => family.id));
+for (const item of multiDishLibrary.cases) {
+  if (!/^D[0-9]{3}$/.test(item.id)) errors.push(`${item.id} 多菜品案例 ID 必须匹配 DNNN`);
+  for (const field of multiDishRequiredFields) {
+    if (!(field in item)) errors.push(`${item.id} 多菜品案例缺少字段 ${field}`);
+  }
+  if (!multiDishLayoutFamilies.has(item.layoutFamily)) errors.push(`${item.id} 引用了不存在的多菜品 layoutFamily：${item.layoutFamily}`);
+  if (!Number.isInteger(item.dishCountShown) || item.dishCountShown < 1) errors.push(`${item.id}.dishCountShown 必须为正整数`);
+  if (!Array.isArray(item.foodImageTreatment) || item.foodImageTreatment.length < 2) errors.push(`${item.id}.foodImageTreatment 至少需要两项`);
+  if (item.rights?.status !== "reference-only" || item.rights?.commercialReuseVerified !== false) {
+    errors.push(`${item.id} 多菜品案例必须保持 reference-only 且 commercialReuseVerified=false`);
+  }
+  if (!item.screenshotTreatment?.trim()) errors.push(`${item.id} 必须说明截图 UI、水印或黑边的处理方式`);
 }
 
 for (const item of brandBenchmarkLibrary.cases) {
@@ -88,8 +120,8 @@ for (const id of ids) {
   if (!routedIds.has(id)) errors.push(`案例 ${id} 未被任何模板路由`);
 }
 
-if (caseLibrary.cases.length !== 6 || brandBenchmarkLibrary.cases.length !== 20 || ids.size !== 26) {
-  errors.push("案例总数必须为 26（6 个通用案例＋20 个品牌基准）");
+if (caseLibrary.cases.length !== 6 || brandBenchmarkLibrary.cases.length !== 20 || multiDishLibrary.cases.length !== 20 || ids.size !== 46) {
+  errors.push("案例总数必须为 46（6 个通用招聘＋20 个品牌招聘基准＋20 个多菜品/招牌菜）");
 }
 
 const guardrails = styleLibrary.brandGuardrails;
@@ -114,4 +146,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validation passed: ${ids.size} recruitment cases (${caseLibrary.cases.length} generic + ${brandBenchmarkLibrary.cases.length} brand benchmarks).`);
+console.log(`Validation passed: ${ids.size} cases (${caseLibrary.cases.length} generic recruitment + ${brandBenchmarkLibrary.cases.length} brand recruitment benchmarks + ${multiDishLibrary.cases.length} multi-dish/signature posters).`);

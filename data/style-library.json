@@ -1,9 +1,10 @@
 {
-  "version": 2,
-  "repository": "<YOUR_GITHUB_REPOSITORY_URL>",
+  "version": 3,
+  "repository": "https://github.com/tiexiang0-alt/restaurant-poster-reference-library",
   "templateDocument": "docs/templates.md",
   "caseDocument": "data/recruitment-cases.json",
   "brandBenchmarkDocument": "data/brand-recruitment-cases.json",
+  "multiDishSignatureDocument": "data/multi-dish-signature-cases.json",
   "tagLabels": {
     "Recruitment": { "en": "Recruitment", "zh": "招聘" },
     "Restaurant": { "en": "Restaurant", "zh": "餐饮" },
@@ -15,7 +16,13 @@
     "China": { "en": "China", "zh": "中国市场" },
     "Brand Benchmark": { "en": "Brand Benchmark", "zh": "品牌基准" },
     "Campaign": { "en": "Campaign", "zh": "系列 Campaign" },
-    "Trademark": { "en": "Trademark", "zh": "商标边界" }
+    "Trademark": { "en": "Trademark", "zh": "商标边界" },
+    "Multi-dish": { "en": "Multi-dish", "zh": "多菜品" },
+    "Signature Dish": { "en": "Signature Dish", "zh": "招牌菜" },
+    "Food Photography": { "en": "Food Photography", "zh": "菜品摄影" },
+    "Price Menu": { "en": "Price Menu", "zh": "价格菜单" },
+    "Lightbox": { "en": "Lightbox", "zh": "门店灯箱" },
+    "Regional": { "en": "Regional", "zh": "地域主题" }
   },
   "brandGuardrails": {
     "brandName": "铁毅祥河洛面",
@@ -53,6 +60,18 @@
       "description": {
         "en": "Twenty user-supplied screenshots analyzed for transferable layout systems, with unverified official status and explicit trademark boundaries.",
         "zh": "20 张用户提供的品牌招聘截图，提炼可迁移版式系统，并明确官方状态未核验与商标禁用边界。"
+      }
+    },
+    {
+      "id": "cat-multi-dish-signature",
+      "value": "Multi-dish & Signature Dish Posters",
+      "anchor": "cat-multi-dish-signature",
+      "templateAnchor": "tpl-multi-dish-signature",
+      "cover": "/assets/multi-dish-signature/case-d001-calligraphy-cutout-trio.jpg",
+      "title": { "en": "Multi-dish & Signature Dish Posters", "zh": "多菜品与招牌菜海报" },
+      "description": {
+        "en": "Twenty user-supplied references for hero-support layouts, dish matrices, price menus, storefront lightboxes and regional food collages.",
+        "zh": "20 张用户提供案例，覆盖主菜＋辅菜、菜品矩阵、价格菜单、实体灯箱与地域美食拼贴。"
       }
     }
   ],
@@ -140,6 +159,48 @@
         ]
       },
       "caseIds": ["R007", "R008", "R009", "R010", "R011", "R012", "R013", "R014", "R015", "R016", "R017", "R018", "R019", "R020", "R021", "R022", "R023", "R024", "R025", "R026"]
+    },
+    {
+      "id": "multi-dish-signature-poster-router",
+      "cover": "/assets/multi-dish-signature/case-d009-green-claypot-feast.jpg",
+      "title": { "en": "Multi-dish & Signature Dish Poster Router", "zh": "多菜品与招牌菜海报路由器" },
+      "description": {
+        "en": "Chooses one evidence-backed food hierarchy before arranging dish images, names, prices and campaign copy.",
+        "zh": "先选择一种经过案例验证的菜品层级，再编排菜图、菜名、价格与推广文案。"
+      },
+      "category": "Multi-dish & Signature Dish Posters",
+      "styles": ["Food Photography", "Information", "Poster"],
+      "scenes": ["Restaurant", "Storefront", "China"],
+      "tags": ["Multi-dish", "Signature Dish", "Food Photography"],
+      "useWhen": {
+        "en": "Use when one poster must promote two or more dishes, a set meal, a seasonal collection or a storefront menu lightbox.",
+        "zh": "用于一张海报需要推广两款以上菜品、套餐、季节合集或门店菜单灯箱时。"
+      },
+      "guidance": {
+        "en": [
+          "Choose exactly one case and one dish hierarchy.",
+          "Bind every dish name and price to its corresponding image.",
+          "Normalize light direction, perspective, plate scale and contact shadows before styling."
+        ],
+        "zh": [
+          "只选择一个案例和一种菜品层级。",
+          "每个菜名与价格必须绑定对应菜图。",
+          "设计装饰前先统一光向、透视、盘径比例与接触阴影。"
+        ]
+      },
+      "pitfalls": {
+        "en": [
+          "Do not treat screenshot bars, UI, watermarks or portfolio marks as design elements.",
+          "Do not invent ingredients, origin, health claims, prices or set-meal quantities.",
+          "Do not mix multiple reference systems into one poster."
+        ],
+        "zh": [
+          "不要把截图黑边、平台 UI、水印或作品集标识当作设计元素。",
+          "不要虚构原料、产地、健康主张、价格或套餐数量。",
+          "不要把多个参考系统混进一张海报。"
+        ]
+      },
+      "caseIds": ["D001", "D002", "D003", "D004", "D005", "D006", "D007", "D008", "D009", "D010", "D011", "D012", "D013", "D014", "D015", "D016", "D017", "D018", "D019", "D020"]
     }
   ]
 }
