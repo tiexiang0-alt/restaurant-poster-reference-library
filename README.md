@@ -1,6 +1,6 @@
 # Restaurant Poster Reference Library
 
-面向中国餐饮门店的实战海报参考库。当前收录 **46 张用户提供案例**：招聘类 26 张，以及第二大类 **多菜品与招牌菜海报 / Multi-dish & Signature Dish Posters** 20 张。不以模型臆造的“风格词”替代案例证据。
+面向中国餐饮门店的实战海报参考库。当前收录 **59 张用户提供案例**：招聘类 26 张，以及第二大类 **多菜品与招牌菜海报 / Multi-dish & Signature Dish Posters** 33 张。不以模型臆造的“风格词”替代案例证据。
 
 仓库结构参考 [awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2) 的“案例 → 分类 → 模板 → 结构化数据”组织方式，但字段、分析与模板均为本仓库重新设计。
 
@@ -10,7 +10,7 @@
 |---|---:|---|---|---|
 | 通用招聘案例 | 6 | [`data/recruitment-cases.json`](data/recruitment-cases.json) | [`docs/recruitment.md`](docs/recruitment.md) | [`docs/templates.md`](docs/templates.md) |
 | 品牌招聘基准 | 20 | [`data/brand-recruitment-cases.json`](data/brand-recruitment-cases.json) | [`docs/brand-benchmarks.md`](docs/brand-benchmarks.md) | [`docs/templates.md`](docs/templates.md) |
-| 多菜品与招牌菜 | 20 | [`data/multi-dish-signature-cases.json`](data/multi-dish-signature-cases.json) | [`docs/multi-dish-signature.md`](docs/multi-dish-signature.md) | [`docs/templates.md#多菜品与招牌菜海报模板`](docs/templates.md#多菜品与招牌菜海报模板) |
+| 多菜品与招牌菜 | 33 | [`data/multi-dish-signature-cases.json`](data/multi-dish-signature-cases.json) | [`docs/multi-dish-signature.md`](docs/multi-dish-signature.md) | [`docs/templates.md#多菜品与招牌菜海报模板`](docs/templates.md#多菜品与招牌菜海报模板) |
 
 ## 招聘案例画廊
 
@@ -38,7 +38,7 @@
 
 ## 多菜品与招牌菜精选
 
-完整的 20 案例分析见 [`docs/multi-dish-signature.md`](docs/multi-dish-signature.md)。图片中的平台 UI、黑边、水印、商标和原文案均不视为可复用设计元素。
+完整的 33 案例分析见 [`docs/multi-dish-signature.md`](docs/multi-dish-signature.md)。图片中的平台 UI、黑边、水印、商标和原文案均不视为可复用设计元素。
 
 | ID | 预览 | 版式家族 | 核心设计机制 |
 |---|---|---|---|
@@ -49,6 +49,9 @@
 | D010 | ![D010](assets/multi-dish-signature/case-d010-light-meal-price-ladder.jpg) | 价格菜单 | 三盘菜沿 Z 字路径与价格成组 |
 | D018 | ![D018](assets/multi-dish-signature/case-d018-rice-noodle-store-lightbox.jpg) | 实体灯箱 | 四碗米线沿窄幅纵向导览 |
 | D020 | ![D020](assets/multi-dish-signature/case-d020-xian-orange-collage.jpg) | 地域拼贴 | 黑白地标＋彩色主食与小吃组合 |
+| D026 | ![D026](assets/multi-dish-signature/case-d026-tai-hing-redemption-grid.jpg) | 品牌菜单 | 蓝色路线串联六个兑换商品模块 |
+| D031 | ![D031](assets/multi-dish-signature/case-d031-ai-mushroom-still-life.jpg) | 质量反例 | 保留疑似生成式乱码，用于人工质检规则 |
+| D033 | ![D033](assets/multi-dish-signature/case-d033-elevator-door-feast-installation.jpg) | 实体应用 | 电梯门中缝安全区＋多菜宴席堆叠 |
 
 ## 铁毅祥品牌文字锁定
 

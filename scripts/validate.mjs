@@ -120,8 +120,8 @@ for (const id of ids) {
   if (!routedIds.has(id)) errors.push(`案例 ${id} 未被任何模板路由`);
 }
 
-if (caseLibrary.cases.length !== 6 || brandBenchmarkLibrary.cases.length !== 20 || multiDishLibrary.cases.length !== 20 || ids.size !== 46) {
-  errors.push("案例总数必须为 46（6 个通用招聘＋20 个品牌招聘基准＋20 个多菜品/招牌菜）");
+if (caseLibrary.cases.length !== 6 || brandBenchmarkLibrary.cases.length !== 20 || multiDishLibrary.cases.length !== 33 || ids.size !== 59) {
+  errors.push("案例总数必须为 59（6 个通用招聘＋20 个品牌招聘基准＋33 个多菜品/招牌菜）");
 }
 
 const guardrails = styleLibrary.brandGuardrails;

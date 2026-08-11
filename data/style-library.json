@@ -70,8 +70,8 @@
       "cover": "/assets/multi-dish-signature/case-d001-calligraphy-cutout-trio.jpg",
       "title": { "en": "Multi-dish & Signature Dish Posters", "zh": "多菜品与招牌菜海报" },
       "description": {
-        "en": "Twenty user-supplied references for hero-support layouts, dish matrices, price menus, storefront lightboxes and regional food collages.",
-        "zh": "20 张用户提供案例，覆盖主菜＋辅菜、菜品矩阵、价格菜单、实体灯箱与地域美食拼贴。"
+        "en": "Thirty-three user-supplied references for hero-support layouts, dish matrices, price menus, storefront installations, regional collages, duplicate detection and quality-control counterexamples.",
+        "zh": "33 张用户提供案例，覆盖主菜＋辅菜、菜品矩阵、价格菜单、实体应用、地域拼贴、重复检测与质量反例。"
       }
     }
   ],
@@ -200,7 +200,7 @@
           "不要把多个参考系统混进一张海报。"
         ]
       },
-      "caseIds": ["D001", "D002", "D003", "D004", "D005", "D006", "D007", "D008", "D009", "D010", "D011", "D012", "D013", "D014", "D015", "D016", "D017", "D018", "D019", "D020"]
+      "caseIds": ["D001", "D002", "D003", "D004", "D005", "D006", "D007", "D008", "D009", "D010", "D011", "D012", "D013", "D014", "D015", "D016", "D017", "D018", "D019", "D020", "D021", "D022", "D023", "D024", "D025", "D026", "D027", "D028", "D029", "D030", "D031", "D032", "D033"]
     }
   ]
 }
